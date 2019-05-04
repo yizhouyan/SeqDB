@@ -63,8 +63,6 @@ public class MiningMaxOnPrevRes {
             if(freqSeqRes.containsKey(superPattern.getFreqPatternInString()))
                 return;
         }
-        // if the pattern is frequent, add to tempFreqSeqRes, if it is not independently frequent, add to tempFreqPatternForII
-        // if support satisfy, check availability of each occurrences and save to tempResult
         //TODO if we change itemGap or seqGap, we need to traverse each pattern occurrence to get the current support number
         freqSeqRes.put(prevFreqPattern.getFreqPatternInString(), prevFreqPattern.getAllSupport());
     }

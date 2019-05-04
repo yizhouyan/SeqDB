@@ -85,12 +85,13 @@ public class FPMining {
                         this.sequenceStorage.getLocalParameterForStorage().getLocalSupport(),
                         this.localSupport, this.itemGap, this.seqGap, this.itemGapTS, this.seqGapTS);
                 HashMap<short[], Integer> curLocalFS = moreComputation.FreqPatternMiningOnPrev();
-                if (curLocalFS != null)
+                if (curLocalFS != null && curLocalFS.size() > 0)
                     localFreqSeqs.put(i, curLocalFS);
             }
         }
 //        printPatternMiningResults(localFreqSeqs);
         System.out.println("Maximum pattern mining takes " + (System.currentTimeMillis()-startTime) + " milliseconds");
+        System.out.println("Number of Sequences that contains frequent patterns: " + localFreqSeqs.size());
         return System.currentTimeMillis()-startTime;
     }
 
@@ -103,12 +104,13 @@ public class FPMining {
                         this.sequenceStorage.getLocalParameterForStorage().getLocalSupport(),
                         this.localSupport, this.itemGap, this.seqGap, this.itemGapTS, this.seqGapTS);
                 HashMap<short[], Integer> curLocalFS = moreComputation.FreqPatternMiningOnPrev();
-                if (curLocalFS != null)
+                if (curLocalFS != null && curLocalFS.size() > 0)
                     localFreqSeqs.put(i, curLocalFS);
             }
         }
 //        printPatternMiningResults(localFreqSeqs);
         System.out.println("Closed pattern mining takes " + (System.currentTimeMillis()-startTime) + " milliseconds");
+        System.out.println("Number of Sequences that contains frequent patterns: " + localFreqSeqs.size());
         return System.currentTimeMillis()-startTime;
     }
 
