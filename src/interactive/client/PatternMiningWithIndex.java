@@ -15,7 +15,7 @@ public class PatternMiningWithIndex {
         try {
             Registry registry = LocateRegistry.getRegistry("localhost");
             RemoteStatement rs = (RemoteStatement) registry.lookup("InteractivePatternExploration");
-            rs.executeMining(10,0,10, 5000, 60000, "close");
+            rs.executeMining(2,0,10, 5000, 60000, "close");
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (NotBoundException e) {

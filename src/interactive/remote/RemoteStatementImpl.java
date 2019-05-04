@@ -8,6 +8,7 @@ import inputdata.LocalParameter;
 //import interactive.mining.index.FPMining;
 //import interactive.query.FPQueryWithGroupTries;
 //import interactive.query.FPQueryWithOneTrie;
+import interactive.mining.index.FPMining;
 import interactive.util.InteractiveToolkit;
 
 import java.io.BufferedWriter;
@@ -103,18 +104,18 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
             long maxTime = 0;
             long sumTime = 0;
 //            for (int i = 2; i < 30; i++) {
-//                localSupport = i;
-//                FPMining fpMining = new FPMining(this.sequenceStorage, localSupport, itemGap, seqGap, itemGapTS, seqGapTS);
-//                long curTime = 0;
-//                if(methodType == 0)
-//                    curTime = fpMining.miningContextualLocalFreqPatternsOnPrev();
-//                else if(methodType == 1)
-//                    curTime = fpMining.miningMaxLocalFreqPatternsOnPrev();
-//                else if(methodType == 2)
-//                    curTime = fpMining.miningCloseLocalFreqPatternsOnPrev();
-//                minTime = Math.min(curTime, minTime);
-//                maxTime = Math.max(curTime, maxTime);
-//                sumTime += curTime;
+//                localSupport = localSupport;
+                FPMining fpMining = new FPMining(this.sequenceStorage, localSupport, itemGap, seqGap, itemGapTS, seqGapTS);
+                long curTime = 0;
+                if(methodType == 0)
+                    curTime = fpMining.miningContextualLocalFreqPatternsOnPrev();
+                else if(methodType == 1)
+                    curTime = fpMining.miningMaxLocalFreqPatternsOnPrev();
+                else if(methodType == 2)
+                    curTime = fpMining.miningCloseLocalFreqPatternsOnPrev();
+                minTime = Math.min(curTime, minTime);
+                maxTime = Math.max(curTime, maxTime);
+                sumTime += curTime;
 //            }
             System.out.println("Min Time: " + minTime * 1.0 / 1000);
             System.out.println("Max Time: " + maxTime * 1.0 / 1000);

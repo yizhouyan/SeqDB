@@ -21,7 +21,7 @@ public class IndexSequences {
 //            rs.setupSequenceIndex("../data/testOnLog.txt", 20,0,10);
 //            rs.setupSequenceIndex("../data/realdata/logstream.csv",2,0,
 //                    10,5*1000, 60*1000);
-            rs.setupSequenceIndex("../data/realdata/CT_data_part_timestamp.csv",2,0,
+            rs.setupSequenceIndex("../data/realdata/CT_data_ts.csv",4,0,
                      10,5*1000, 60*1000);
 //            rs.setupSequenceIndex("../data/realdata/oneSequence.csv",2,0,10,
 //                    5*1000, 60*1000);
