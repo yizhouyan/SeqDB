@@ -103,24 +103,28 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
             long minTime = Long.MAX_VALUE;
             long maxTime = 0;
             long sumTime = 0;
-//            for (int i = 2; i < 30; i++) {
-//                localSupport = localSupport;
-                FPMining fpMining = new FPMining(this.sequenceStorage, localSupport, itemGap, seqGap, itemGapTS, seqGapTS);
-                long curTime = 0;
-                if(methodType == 0)
-                    curTime = fpMining.miningContextualLocalFreqPatternsOnPrev();
-                else if(methodType == 1)
-                    curTime = fpMining.miningMaxLocalFreqPatternsOnPrev();
-                else if(methodType == 2)
-                    curTime = fpMining.miningCloseLocalFreqPatternsOnPrev();
+            for (int i = 0; i < 5; i++) {
+//                localSupport = i;
+            FPMining fpMining = new FPMining(this.sequenceStorage, localSupport, itemGap, seqGap, itemGapTS, seqGapTS);
+            long curTime = 0;
+            System.out.println("Support: " + localSupport + ", " + method);
+            if(methodType == 0)
+                curTime = fpMining.miningContextualLocalFreqPatternsOnPrev();
+            else if(methodType == 1)
+                curTime = fpMining.miningMaxLocalFreqPatternsOnPrev();
+            else if(methodType == 2)
+                curTime = fpMining.miningCloseLocalFreqPatternsOnPrev();
+//            else if (methodType == 3)
+//                curTime = fpMining.miningFreqLocalFreqPatternsOnPrev();
+            System.out.println(method + " Pattern Mining on Index takes: " + curTime * 1.0 / (1000) + " seconds");
                 minTime = Math.min(curTime, minTime);
                 maxTime = Math.max(curTime, maxTime);
                 sumTime += curTime;
-//            }
+            }
             System.out.println("Min Time: " + minTime * 1.0 / 1000);
             System.out.println("Max Time: " + maxTime * 1.0 / 1000);
-            System.out.println("Sum Time: " + sumTime * 1.0 / 1000);
-            System.out.println("Average Time: " + sumTime * 1.0 / (1000 * 28));
+//            System.out.println("Sum Time: " + sumTime * 1.0 / 1000);
+            System.out.println("Average Time: " + sumTime * 1.0 / (1000 * 5));
         }
         System.out.println("-------------------------------End Pattern Mining on Existing Index--------------------------------");
         System.out.println();
@@ -225,7 +229,7 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
             for(String s: globalFreqPattern.keySet()) {
                 String []splits = s.split(",");
                 for(String ss: splits){
-                    countEvents.put(ss, countEvents.getOrDefault(ss,0) + 1);
+//                    countEvents.put(ss, countEvents.getOrDefault(ss,0) + 1);
                 }
             }
             String maxStr ="";
