@@ -24,7 +24,7 @@ public class IndexSequences {
             //"../data/realdata/CT_data_ts.csv"
 //            rs.setupSequenceIndex(args[0],Integer.parseInt(args[1]),0,
 //                    Integer.parseInt(args[2]),5*1000, 60*1000);
-            rs.setupSequenceIndex("../data/realdata/CT_data_ts.csv",2, 0,
+            rs.setupSequenceIndex(args[0],Integer.parseInt(args[1]), 0,
                     10,5*1000, 60*1000);
 //            System.out.println("Input File: " + args[0]);
 //            rs.setupSequenceIndex("../data/realdata/oneSequence.csv",2,0,10,2);

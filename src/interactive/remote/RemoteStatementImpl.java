@@ -70,6 +70,7 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
                                    int seqGap, long itemGapTS, long seqGapTS) throws RemoteException {
         System.out.println("Request Received --- setup index for " + inputFile);
         System.out.println();
+        System.out.println("Input File: " + inputFile + ", local support: " + localSupport);
         System.out.println("-------------------------------Start Building Index--------------------------------");
         this.sequenceStorage = new SequenceStorage();
         this.sequenceStorage.readInputDataFromFileWithMeta(inputFile, metaFile);

@@ -29,7 +29,7 @@ public class MaxFSDetection {
 			InputSequenceWithTS inputSequence = new InputSequenceWithTS(inputStr);
 			SingleMaxPatternMiningTS obj = new SingleMaxPatternMiningTS(inputSequence, localParameterSpace);
 			obj.findFreqSeqInOneString(globalFrequentElements);
-			if(i % 10 == 0)
+			if(i % 1000 == 0)
 				System.out.println(i + " Finished");
 //				System.out.println(i);
 		}

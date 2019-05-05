@@ -30,7 +30,7 @@ public class CloseFSDetection {
 			InputSequenceWithTS inputSequence = new InputSequenceWithTS(inputStr);
 			SingleClosePatternMiningTS obj = new SingleClosePatternMiningTS(inputSequence, localParameterSpace);
 			obj.findFreqSeqInOneString(globalFrequentElements);
-			if(i % 10 == 0)
+			if(i % 1000 == 0)
 				System.out.println(i + " Finished");
 //				System.out.println(i);
 		}
@@ -69,7 +69,7 @@ public class CloseFSDetection {
 		CloseFSDetection globalFS = new CloseFSDetection(LocalMinSupport, itemgap, seqGap, itemInterval, seqInterval,
 				inputStringArray);
 		long curTime = globalFS.generateLocalFrequentSequences(globalFrequentElements);
-		System.out.println("Maximum Pattern Mining takes " + curTime *1.0 /1000 + " seconds!");
+		System.out.println("Close Pattern Mining takes " + curTime *1.0 /1000 + " seconds!");
 	}
 
 }

@@ -40,18 +40,85 @@ public class FPQueryWithOneTrie {
         for (int i = 0; i < this.sequenceStorage.getInputData().getInputStringArray().size(); i++) {
             long startTime = System.nanoTime();
 //            System.out.println("i = " + i);
-            int matchInIndex = 1; // 0->complete match, 2->no match
+//            int matchInIndex = 1; // 0->complete match, 2->no match
             if (patternWrapupHashMap.containsKey(i)) {
                 // get pattern occurrence on each single sequence
                 int bestMatchStartPoint = 0;
                 if(bestMatchStartPoints.containsKey(i))
                     bestMatchStartPoint = bestMatchStartPoints.get(i);
-//                QueryResult curBitSetRes =
-                matchInIndex= queryOnSingleSequence(this.sequenceStorage.getLocalFreqPatternWrapUps().get(i),
+                //matchInIndex
+                QueryResult curBitSetRes = queryOnSingleSequence(this.sequenceStorage.getLocalFreqPatternWrapUps().get(i),
                         patternWrapupHashMap.get(i), bestMatchStartPoint);
+                if (curBitSetRes.getSupportCount() > 0)
+                    patternOccurrences.put(i, curBitSetRes);
+            }
+            else {
+                SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
+                        sequenceStorage.getInputData().getInputTimeStamp().get(i),
+                        queryStr, sequenceStorage.getLocalParameterForStorage().getItemGap(),
+                        sequenceStorage.getLocalParameterForStorage().getSeqGap(),
+                        sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
+                        sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
+//                QueryResult curBitSetRes =
+                singleScan.scanSequenceForMatch();
 //                if (curBitSetRes.getSupportCount() > 0)
 //                    patternOccurrences.put(i, curBitSetRes);
             }
+            long endTime = System.nanoTime();
+
+            // results of baseline methods
+            count++;
+            sumTime += endTime-startTime;
+            long startTimeScan = System.nanoTime();
+            SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
+                    sequenceStorage.getInputData().getInputTimeStamp().get(i),
+                    queryStr, sequenceStorage.getLocalParameterForStorage().getItemGap(),
+                    sequenceStorage.getLocalParameterForStorage().getSeqGap(),
+                    sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
+                    sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
+//                QueryResult curBitSetRes =
+            singleScan.scanSequenceForMatch();
+            long endTimeScan = System.nanoTime();
+            sumBaseline += endTimeScan-startTimeScan;
+        }
+//        System.out.println("Pattern query takes " + (System.currentTimeMillis() - startTime) * 1.0 / 1000 + " seconds");
+        //TODO save current query result to cache
+        return new long[]{sumTime/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+                sumBaseline/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+                endTrieSearch-startTrieSearch};
+        //patternOccurrences;
+    }
+
+
+//    public long[] queryOnAllSequencesWithOneTrie() {
+//
+//        HashMap<Integer, QueryResult> patternOccurrences = new HashMap<Integer, QueryResult>();
+//        HashMap<Integer, Integer> bestMatchStartPoints = new HashMap<>();
+//        long startTrieSearch = System.nanoTime();
+//        HashMap<Integer, FreqPatternWrapup> patternWrapupHashMap =
+//                this.sequenceStorage.getFreqPatternTrie().findMatchFreqPatternForDevicesWithOpt(queryStr, bestMatchStartPoints);
+//        long endTrieSearch = System.nanoTime();
+//
+//
+//        int count = 0;
+//        long sumTime = 0;
+//        long sumBaseline = 0;
+//
+//        for (int i = 0; i < this.sequenceStorage.getInputData().getInputStringArray().size(); i++) {
+//            long startTime = System.nanoTime();
+////            System.out.println("i = " + i);
+//            int matchInIndex = 2; // 0->complete match, 2->no match
+//            if (patternWrapupHashMap.containsKey(i)) {
+//                // get pattern occurrence on each single sequence
+//                int bestMatchStartPoint = 0;
+//                if(bestMatchStartPoints.containsKey(i))
+//                    bestMatchStartPoint = bestMatchStartPoints.get(i);
+////                QueryResult curBitSetRes =
+//                matchInIndex= queryOnSingleSequence(this.sequenceStorage.getLocalFreqPatternWrapUps().get(i),
+//                        patternWrapupHashMap.get(i), bestMatchStartPoint);
+////                if (curBitSetRes.getSupportCount() > 0)
+////                    patternOccurrences.put(i, curBitSetRes);
+//            }
 //            else {
 //                SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
 //                        sequenceStorage.getInputData().getInputTimeStamp().get(i),
@@ -64,32 +131,32 @@ public class FPQueryWithOneTrie {
 ////                if (curBitSetRes.getSupportCount() > 0)
 ////                    patternOccurrences.put(i, curBitSetRes);
 //            }
-            long endTime = System.nanoTime();
-            if(matchInIndex == 0){
-                count++;
-                sumTime += endTime-startTime;
-                long startTimeScan = System.nanoTime();
-                SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
-                        sequenceStorage.getInputData().getInputTimeStamp().get(i),
-                        queryStr, sequenceStorage.getLocalParameterForStorage().getItemGap(),
-                        sequenceStorage.getLocalParameterForStorage().getSeqGap(),
-                        sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
-                        sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
-//                QueryResult curBitSetRes =
-                singleScan.scanSequenceForMatch();
-                long endTimeScan = System.nanoTime();
-                sumBaseline += endTimeScan-startTimeScan;
-            }
-        }
-//        System.out.println("Pattern query takes " + (System.currentTimeMillis() - startTime) * 1.0 / 1000 + " seconds");
-        //TODO save current query result to cache
-        return new long[]{sumTime/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
-                sumBaseline/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
-                endTrieSearch-startTrieSearch};
-        //patternOccurrences;
-    }
+//            long endTime = System.nanoTime();
+//            if(matchInIndex == 0){
+//                count++;
+//                sumTime += endTime-startTime;
+//                long startTimeScan = System.nanoTime();
+//                SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
+//                        sequenceStorage.getInputData().getInputTimeStamp().get(i),
+//                        queryStr, sequenceStorage.getLocalParameterForStorage().getItemGap(),
+//                        sequenceStorage.getLocalParameterForStorage().getSeqGap(),
+//                        sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
+//                        sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
+////                QueryResult curBitSetRes =
+//                singleScan.scanSequenceForMatch();
+//                long endTimeScan = System.nanoTime();
+//                sumBaseline += endTimeScan-startTimeScan;
+//            }
+//        }
+////        System.out.println("Pattern query takes " + (System.currentTimeMillis() - startTime) * 1.0 / 1000 + " seconds");
+//        //TODO save current query result to cache
+//        return new long[]{sumTime/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+//                sumBaseline/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+//                endTrieSearch-startTrieSearch};
+//        //patternOccurrences;
+//    }
 
-    public int queryOnSingleSequence(SingleSeqWrapup curSequence, FreqPatternWrapup bestMatchPattern, int bestMatchStartPos) {
+    public QueryResult queryOnSingleSequence(SingleSeqWrapup curSequence, FreqPatternWrapup bestMatchPattern, int bestMatchStartPos) {
 //            System.out.println("Best Match Frequent Pattern: " + bestMatchPattern.printPattern(curSequence.getSeqLength()));
 //            return scanSequenceForQuery(curSequence);
             QueryResultCache matchedResult = bestMatchPattern.getCompleteQueryResult(curSequence.getSeqLength(), curSequence.getOriginalSequence(),
@@ -98,12 +165,10 @@ public class FPQueryWithOneTrie {
                     sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
                     sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
             if(bestMatchPattern.getPatternLength() == this.queryStr.length) {
-                return 0;
-//                return matchedResult;
+                return matchedResult;
             }
             else {
-                findPatternOccurrenceFromFreq(curSequence, matchedResult, bestMatchStartPos);
-                return 1;
+                return findPatternOccurrenceFromFreq(curSequence, matchedResult, bestMatchStartPos);
             }
     }
 

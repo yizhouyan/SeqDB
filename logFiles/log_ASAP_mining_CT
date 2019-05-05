@@ -1,0 +1,911 @@
+Server connected !
+Request Received --- setup index for ../data/realdata/CT_data_ts.csv
+
+-------------------------------Start Building Index--------------------------------
+Number of devices: 283144, number of sequences: 283144
+Complete reading input file...
+Total number of sequences: 283144
+Dictionary Size: 14
+
+0 Finished
+1000 Finished
+2000 Finished
+3000 Finished
+4000 Finished
+5000 Finished
+6000 Finished
+7000 Finished
+8000 Finished
+9000 Finished
+10000 Finished
+11000 Finished
+12000 Finished
+13000 Finished
+14000 Finished
+15000 Finished
+16000 Finished
+17000 Finished
+18000 Finished
+19000 Finished
+20000 Finished
+21000 Finished
+22000 Finished
+23000 Finished
+24000 Finished
+25000 Finished
+26000 Finished
+27000 Finished
+28000 Finished
+29000 Finished
+30000 Finished
+31000 Finished
+32000 Finished
+33000 Finished
+34000 Finished
+35000 Finished
+36000 Finished
+37000 Finished
+38000 Finished
+39000 Finished
+40000 Finished
+41000 Finished
+42000 Finished
+43000 Finished
+44000 Finished
+45000 Finished
+46000 Finished
+47000 Finished
+48000 Finished
+49000 Finished
+50000 Finished
+51000 Finished
+52000 Finished
+53000 Finished
+54000 Finished
+55000 Finished
+56000 Finished
+57000 Finished
+58000 Finished
+59000 Finished
+60000 Finished
+61000 Finished
+62000 Finished
+63000 Finished
+64000 Finished
+65000 Finished
+66000 Finished
+67000 Finished
+68000 Finished
+69000 Finished
+70000 Finished
+71000 Finished
+72000 Finished
+73000 Finished
+74000 Finished
+75000 Finished
+76000 Finished
+77000 Finished
+78000 Finished
+79000 Finished
+80000 Finished
+81000 Finished
+82000 Finished
+83000 Finished
+84000 Finished
+85000 Finished
+86000 Finished
+87000 Finished
+88000 Finished
+89000 Finished
+90000 Finished
+91000 Finished
+92000 Finished
+93000 Finished
+94000 Finished
+95000 Finished
+96000 Finished
+97000 Finished
+98000 Finished
+99000 Finished
+100000 Finished
+101000 Finished
+102000 Finished
+103000 Finished
+104000 Finished
+105000 Finished
+106000 Finished
+107000 Finished
+108000 Finished
+109000 Finished
+110000 Finished
+111000 Finished
+112000 Finished
+113000 Finished
+114000 Finished
+115000 Finished
+116000 Finished
+117000 Finished
+118000 Finished
+119000 Finished
+120000 Finished
+121000 Finished
+122000 Finished
+123000 Finished
+124000 Finished
+125000 Finished
+126000 Finished
+127000 Finished
+128000 Finished
+129000 Finished
+130000 Finished
+131000 Finished
+132000 Finished
+133000 Finished
+134000 Finished
+135000 Finished
+136000 Finished
+137000 Finished
+138000 Finished
+139000 Finished
+140000 Finished
+141000 Finished
+142000 Finished
+143000 Finished
+144000 Finished
+145000 Finished
+146000 Finished
+147000 Finished
+148000 Finished
+149000 Finished
+150000 Finished
+151000 Finished
+152000 Finished
+153000 Finished
+154000 Finished
+155000 Finished
+156000 Finished
+157000 Finished
+158000 Finished
+159000 Finished
+160000 Finished
+161000 Finished
+162000 Finished
+163000 Finished
+164000 Finished
+165000 Finished
+166000 Finished
+167000 Finished
+168000 Finished
+169000 Finished
+170000 Finished
+171000 Finished
+172000 Finished
+173000 Finished
+174000 Finished
+175000 Finished
+176000 Finished
+177000 Finished
+178000 Finished
+179000 Finished
+180000 Finished
+181000 Finished
+182000 Finished
+183000 Finished
+184000 Finished
+185000 Finished
+186000 Finished
+187000 Finished
+188000 Finished
+189000 Finished
+190000 Finished
+191000 Finished
+192000 Finished
+193000 Finished
+194000 Finished
+195000 Finished
+196000 Finished
+197000 Finished
+198000 Finished
+199000 Finished
+200000 Finished
+201000 Finished
+202000 Finished
+203000 Finished
+204000 Finished
+205000 Finished
+206000 Finished
+207000 Finished
+208000 Finished
+209000 Finished
+210000 Finished
+211000 Finished
+212000 Finished
+213000 Finished
+214000 Finished
+215000 Finished
+216000 Finished
+217000 Finished
+218000 Finished
+219000 Finished
+220000 Finished
+221000 Finished
+222000 Finished
+223000 Finished
+224000 Finished
+225000 Finished
+226000 Finished
+227000 Finished
+228000 Finished
+229000 Finished
+230000 Finished
+231000 Finished
+232000 Finished
+233000 Finished
+234000 Finished
+235000 Finished
+236000 Finished
+237000 Finished
+238000 Finished
+239000 Finished
+240000 Finished
+241000 Finished
+242000 Finished
+243000 Finished
+244000 Finished
+245000 Finished
+246000 Finished
+247000 Finished
+248000 Finished
+249000 Finished
+250000 Finished
+251000 Finished
+252000 Finished
+253000 Finished
+254000 Finished
+255000 Finished
+256000 Finished
+257000 Finished
+258000 Finished
+259000 Finished
+260000 Finished
+261000 Finished
+262000 Finished
+263000 Finished
+264000 Finished
+265000 Finished
+266000 Finished
+267000 Finished
+268000 Finished
+269000 Finished
+270000 Finished
+271000 Finished
+272000 Finished
+273000 Finished
+274000 Finished
+275000 Finished
+276000 Finished
+277000 Finished
+278000 Finished
+279000 Finished
+280000 Finished
+281000 Finished
+282000 Finished
+283000 Finished
+Building up index takes 167.389 seconds
+-------------------------------End Building Index--------------------------------
+
+Used memory is bytes: 2227045152
+Used memory is megabytes: 2123
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 2, close
+Closed pattern mining takes 698 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.698 seconds
+Support: 2, close
+Closed pattern mining takes 522 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.522 seconds
+Support: 2, close
+Closed pattern mining takes 560 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.56 seconds
+Support: 2, close
+Closed pattern mining takes 576 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.576 seconds
+Support: 2, close
+Closed pattern mining takes 558 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.558 seconds
+Support: 2, close
+Closed pattern mining takes 562 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.562 seconds
+Support: 2, close
+Closed pattern mining takes 611 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.611 seconds
+Support: 2, close
+Closed pattern mining takes 537 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.537 seconds
+Support: 2, close
+Closed pattern mining takes 545 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.545 seconds
+Support: 2, close
+Closed pattern mining takes 547 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.548 seconds
+Min Time: 0.522
+Max Time: 0.698
+Average Time: 0.5717
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 5, close
+Closed pattern mining takes 517 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.517 seconds
+Support: 5, close
+Closed pattern mining takes 548 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.548 seconds
+Support: 5, close
+Closed pattern mining takes 530 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.53 seconds
+Support: 5, close
+Closed pattern mining takes 524 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.524 seconds
+Support: 5, close
+Closed pattern mining takes 525 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.525 seconds
+Support: 5, close
+Closed pattern mining takes 527 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.527 seconds
+Support: 5, close
+Closed pattern mining takes 539 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.539 seconds
+Support: 5, close
+Closed pattern mining takes 513 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.513 seconds
+Support: 5, close
+Closed pattern mining takes 539 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.539 seconds
+Support: 5, close
+Closed pattern mining takes 522 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.522 seconds
+Min Time: 0.513
+Max Time: 0.548
+Average Time: 0.5284
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 10, close
+Closed pattern mining takes 521 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.521 seconds
+Support: 10, close
+Closed pattern mining takes 546 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.546 seconds
+Support: 10, close
+Closed pattern mining takes 523 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.523 seconds
+Support: 10, close
+Closed pattern mining takes 515 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.515 seconds
+Support: 10, close
+Closed pattern mining takes 521 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.521 seconds
+Support: 10, close
+Closed pattern mining takes 527 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.527 seconds
+Support: 10, close
+Closed pattern mining takes 533 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.533 seconds
+Support: 10, close
+Closed pattern mining takes 539 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.539 seconds
+Support: 10, close
+Closed pattern mining takes 536 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.536 seconds
+Support: 10, close
+Closed pattern mining takes 515 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.516 seconds
+Min Time: 0.515
+Max Time: 0.546
+Average Time: 0.5277
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 15, close
+Closed pattern mining takes 523 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.523 seconds
+Support: 15, close
+Closed pattern mining takes 518 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.519 seconds
+Support: 15, close
+Closed pattern mining takes 521 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.521 seconds
+Support: 15, close
+Closed pattern mining takes 524 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.524 seconds
+Support: 15, close
+Closed pattern mining takes 540 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.54 seconds
+Support: 15, close
+Closed pattern mining takes 530 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.53 seconds
+Support: 15, close
+Closed pattern mining takes 528 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.528 seconds
+Support: 15, close
+Closed pattern mining takes 530 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.53 seconds
+Support: 15, close
+Closed pattern mining takes 517 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.517 seconds
+Support: 15, close
+Closed pattern mining takes 506 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.506 seconds
+Min Time: 0.506
+Max Time: 0.54
+Average Time: 0.5238
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 20, close
+Closed pattern mining takes 526 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.526 seconds
+Support: 20, close
+Closed pattern mining takes 536 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.537 seconds
+Support: 20, close
+Closed pattern mining takes 606 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.606 seconds
+Support: 20, close
+Closed pattern mining takes 574 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.574 seconds
+Support: 20, close
+Closed pattern mining takes 520 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.52 seconds
+Support: 20, close
+Closed pattern mining takes 535 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.535 seconds
+Support: 20, close
+Closed pattern mining takes 532 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.532 seconds
+Support: 20, close
+Closed pattern mining takes 514 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.514 seconds
+Support: 20, close
+Closed pattern mining takes 514 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.515 seconds
+Support: 20, close
+Closed pattern mining takes 561 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+close Pattern Mining on Index takes: 0.561 seconds
+Min Time: 0.514
+Max Time: 0.606
+Average Time: 0.542
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 2, max
+Maximum pattern mining takes 367 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.367 seconds
+Support: 2, max
+Maximum pattern mining takes 310 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.31 seconds
+Support: 2, max
+Maximum pattern mining takes 306 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.306 seconds
+Support: 2, max
+Maximum pattern mining takes 351 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.351 seconds
+Support: 2, max
+Maximum pattern mining takes 306 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.306 seconds
+Support: 2, max
+Maximum pattern mining takes 317 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.317 seconds
+Support: 2, max
+Maximum pattern mining takes 319 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.319 seconds
+Support: 2, max
+Maximum pattern mining takes 326 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.326 seconds
+Support: 2, max
+Maximum pattern mining takes 330 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.33 seconds
+Support: 2, max
+Maximum pattern mining takes 328 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.328 seconds
+Min Time: 0.306
+Max Time: 0.367
+Average Time: 0.326
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 5, max
+Maximum pattern mining takes 336 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.336 seconds
+Support: 5, max
+Maximum pattern mining takes 334 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.334 seconds
+Support: 5, max
+Maximum pattern mining takes 327 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.327 seconds
+Support: 5, max
+Maximum pattern mining takes 340 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.34 seconds
+Support: 5, max
+Maximum pattern mining takes 323 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.323 seconds
+Support: 5, max
+Maximum pattern mining takes 333 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.333 seconds
+Support: 5, max
+Maximum pattern mining takes 345 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.345 seconds
+Support: 5, max
+Maximum pattern mining takes 334 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.334 seconds
+Support: 5, max
+Maximum pattern mining takes 325 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.325 seconds
+Support: 5, max
+Maximum pattern mining takes 334 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.334 seconds
+Min Time: 0.323
+Max Time: 0.345
+Average Time: 0.3331
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 10, max
+Maximum pattern mining takes 344 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.344 seconds
+Support: 10, max
+Maximum pattern mining takes 329 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.329 seconds
+Support: 10, max
+Maximum pattern mining takes 328 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.328 seconds
+Support: 10, max
+Maximum pattern mining takes 349 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.349 seconds
+Support: 10, max
+Maximum pattern mining takes 329 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.329 seconds
+Support: 10, max
+Maximum pattern mining takes 338 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.338 seconds
+Support: 10, max
+Maximum pattern mining takes 339 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.339 seconds
+Support: 10, max
+Maximum pattern mining takes 334 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.334 seconds
+Support: 10, max
+Maximum pattern mining takes 331 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.331 seconds
+Support: 10, max
+Maximum pattern mining takes 325 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.325 seconds
+Min Time: 0.325
+Max Time: 0.349
+Average Time: 0.3346
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 15, max
+Maximum pattern mining takes 324 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.324 seconds
+Support: 15, max
+Maximum pattern mining takes 339 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.339 seconds
+Support: 15, max
+Maximum pattern mining takes 335 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.335 seconds
+Support: 15, max
+Maximum pattern mining takes 335 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.335 seconds
+Support: 15, max
+Maximum pattern mining takes 346 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.346 seconds
+Support: 15, max
+Maximum pattern mining takes 335 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.335 seconds
+Support: 15, max
+Maximum pattern mining takes 334 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.334 seconds
+Support: 15, max
+Maximum pattern mining takes 329 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.329 seconds
+Support: 15, max
+Maximum pattern mining takes 340 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.34 seconds
+Support: 15, max
+Maximum pattern mining takes 340 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.34 seconds
+Min Time: 0.324
+Max Time: 0.346
+Average Time: 0.3357
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+Request Received --- pattern mining on existing index
+
+-------------------------------Start Pattern Mining on Existing Index--------------------------------
+Support: 20, max
+Maximum pattern mining takes 344 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.345 seconds
+Support: 20, max
+Maximum pattern mining takes 327 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.327 seconds
+Support: 20, max
+Maximum pattern mining takes 327 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.327 seconds
+Support: 20, max
+Maximum pattern mining takes 325 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.325 seconds
+Support: 20, max
+Maximum pattern mining takes 323 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.323 seconds
+Support: 20, max
+Maximum pattern mining takes 339 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.339 seconds
+Support: 20, max
+Maximum pattern mining takes 338 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.338 seconds
+Support: 20, max
+Maximum pattern mining takes 351 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.352 seconds
+Support: 20, max
+Maximum pattern mining takes 347 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.347 seconds
+Support: 20, max
+Maximum pattern mining takes 348 milliseconds
+Number of Sequences that contains frequent patterns: 281922
+max Pattern Mining on Index takes: 0.348 seconds
+Min Time: 0.323
+Max Time: 0.352
+Average Time: 0.3371
+-------------------------------End Pattern Mining on Existing Index--------------------------------
+
+8,9
+5,0
+3,4
+0,12
+0,11
+0,13
+0,2
+0,1
+0,7
+0,6
+0,5
+0,4
+0,8
+8,0
+7,0
+12,0
+6,0
+2,3
+2,4
+4,2
+4,3
+1,2
+1,4
+6,7
+11,0
+2,3,3
+2,3,4
+6,7,0
+6,0,1
+0,4,3
+0,4,2
+0,2,3
+0,2,4
+4,2,3
+4,2,2
+2,3,13
+1,4,2
+1,2,2
+1,2,3
+0,6,7
+11,0,2
+11,0,1
+11,0,4
+0,1,13
+0,8,9
+0,1,2
+0,1,4
+0,1,5
+7,0,1
+8,9,0
+12,0,4
+8,0,1
+11,0,3,4
+1,2,3,4
+11,0,1,2
+0,1,3,4
+11,0,4,2
+11,0,4,3
+0,1,2,2
+0,1,2,4
+0,1,2,3
+2,3,3,4
+8,9,0,1
+0,4,2,3
+1,2,2,2
+1,2,2,3
+4,2,3,13
+6,0,1,2
+6,0,1,4
+4,2,2,3
+4,2,2,2
+1,4,2,2
+6,7,0,1
+7,0,1,4
+1,4,2,3
+12,0,4,2
+0,2,3,4
+0,1,4,3
+0,1,4,2
+0,1,5,5
+0,1,4,2,2
+0,1,4,2,3
+0,2,2,3,4
+1,2,2,2,3
+7,0,1,4,2
+0,1,2,3,4
+11,0,1,4,2
+6,0,1,4,2
+11,0,4,2,3
+6,0,1,2,2
+6,0,1,2,3
+11,0,2,3,4
+1,4,2,2,2
+1,4,2,2,3
+4,2,2,2,2
+4,2,2,2,3
+1,2,2,3,4
+0,1,2,2,3
+0,1,2,2,2
+4,2,2,2,2,3
+2,3,3,3,3,4
+11,0,1,4,2,3
+6,0,1,2,2,3
+11,0,1,2,3,4
+1,2,2,2,3,4
+0,1,4,2,3,13
+0,1,2,2,3,4
+0,1,2,2,2,2
+6,0,1,2,3,4
+0,1,2,2,2,3
+0,1,4,2,2,2
+6,0,1,4,2,2
+0,1,4,2,3,3
+6,0,1,4,2,3
+0,1,4,2,2,3
+7,0,1,4,2,3
+7,0,1,4,2,2
+1,4,2,2,2,3
+1,4,2,2,2,2
+0,1,4,2,2,2,3
+0,1,4,2,2,2,2
+6,0,1,4,2,2,3
+0,1,2,2,2,2,2
+0,1,2,2,2,2,3
+0,1,2,2,2,3,4
+6,0,1,2,2,3,4
+0,1,2,2,2,2,3,4
+0,1,4,2,2,2,2,3
+0,1,4,2,2,2,2,2
+0,1,2,2,2,2,2,3,4
+0,1,4,2,2,2,2,2,2
+0,1,4,2,2,2,2,2,3
+0,1,2,2,2,2,2,2,2

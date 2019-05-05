@@ -16,15 +16,21 @@ faster or more than the current state-of-the-art pattern query and mining techni
 
 ##### 1. Start the server
 ```bash
-java -cp out/artifacts/CompactInteractivePatternExploration_jar/CompactInteractivePatternExploration.jar interactive.server.Startup
+java -cp ASAP_jar/ASAP.jar interactive.server.Startup
 ```
-##### 1. Building up index
+##### 2. Building up index
 ```bash
-java -cp main_philips.py --lr 1e-5 --resume inception-resnet-v2-model-resize-299-normalized/model_best.pth.tar -b 64 -e
+java -cp ASAP_jar/ASAP.jar interactive.client.IndexSequences [INPUT_DATA_FILE] [min_support]
 ```
-##### 2. Pattern Mining
-
-##### 3. Pattern Querying 
+Examples:
+```bash
+java -cp ASAP_jar/ASAP.jar interactive.client.IndexSequences "CT_data_ts.csv" 2
+```
+##### 3. Pattern Mining
+```bash
+java -cp ASAP_jar/ASAP.jar interactive.client.PatternMiningWithIndex [support] [close/max]
+```
+##### 4. Pattern Querying 
 
 ### License
 
