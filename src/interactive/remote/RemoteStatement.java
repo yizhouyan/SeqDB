@@ -13,6 +13,6 @@ public interface RemoteStatement extends Remote {
                                    long itemGapTS, long seqGapTS) throws RemoteException;
     public void executeMining(int localSupport, int itemGap, int seqGap, long itemGapTS, long seqGapTS, String method) throws RemoteException;
     public void executeQuery(String qry) throws RemoteException;
-    public void executeQuery() throws RemoteException;
+    public void executeQuery(String globalFreqFileName, String outputFileName) throws RemoteException;
     public void getGlobalFreqPattern(int globalSupport, boolean outputToFile) throws RemoteException;
 }

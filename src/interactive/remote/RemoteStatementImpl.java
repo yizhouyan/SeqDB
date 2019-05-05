@@ -7,7 +7,7 @@ import interactive.metadata.FreqPatternWrapup;
 import inputdata.LocalParameter;
 //import interactive.mining.index.FPMining;
 //import interactive.query.FPQueryWithGroupTries;
-//import interactive.query.FPQueryWithOneTrie;
+import interactive.query.FPQuery;
 import interactive.mining.index.FPMining;
 import interactive.util.InteractiveToolkit;
 
@@ -148,8 +148,8 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
         System.out.println();
         System.out.println("-------------------------------Start Pattern Query on Existing Index--------------------------------");
         if(checkStorageAvailability()) {
-//            FPQuery fpQuery = new FPQuery(this.sequenceStorage, this.sequenceStorage.getInputData().translateQuery(qry));
-//            fpQuery.queryOnAllSequences();
+            FPQuery fpQuery = new FPQuery(this.sequenceStorage, this.sequenceStorage.getInputData().translateQuery(qry));
+            fpQuery.queryOnAllSequences();
             System.out.println("pattern query with existing index");
         }
         System.out.println("-------------------------------End Pattern Query on Existing Index--------------------------------");
@@ -158,11 +158,11 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
 
 
     @Override
-    public void executeQuery() throws RemoteException {
-        ArrayList<Double> timeCosts = new ArrayList<>();
+    public void executeQuery(String globalFreqFileName, String outputFileName) throws RemoteException {
+        ArrayList<long []> timeCosts = new ArrayList<>();
 //        ArrayList<String> queries = InteractiveToolkit.generateQuery();
 //        ArrayList<String> queries = InteractiveToolkit.getQuerysFromFile("GlobalFrequent_logFile");
-        ArrayList<String> queries = InteractiveToolkit.getQuerysFromFile("GlobalFrequent");
+        ArrayList<String> queries = InteractiveToolkit.getQuerysFromFile(globalFreqFileName);
         if(checkStorageAvailability()) {
             for(String qry: queries) {
 //                qry = "69," + qry;
@@ -175,23 +175,26 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
                 }
 //                FPQueryWithOneTrie fpQuery = new FPQueryWithOneTrie(this.sequenceStorage, queryInShort);
 ////                FPQueryWithGroupTries fpQuery = new FPQueryWithGroupTries(this.sequenceStorage, queryInShort);
-//////                FPQuery fpQuery = new FPQuery(this.sequenceStorage, this.sequenceStorage.getInputData().translateQuery(qry));
+                FPQuery fpQuery = new FPQuery(this.sequenceStorage, queryInShort);
+                long[] timeCost = fpQuery.queryOnAllSequences();
 //                double timeCost1 = fpQuery.queryOnAllSequencesWithOneTrie();
 //                double timeCost2 = fpQuery.queryOnAllSequencesWithOneTrie();
 //                double timeCost3 = fpQuery.queryOnAllSequencesWithOneTrie();
 //                double timeCost = (timeCost1 + timeCost2 + timeCost3) / 3;
-//                timeCosts.add(timeCost);
+                timeCosts.add(timeCost);
             }
         }
+
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("Results_indexquery_globalFrequent_onetrie"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName));
 //            BufferedWriter writer = new BufferedWriter(new FileWriter("Results_indexquery_globalFrequent_logFile_synthetic_opt"));
-            for(Double d: timeCosts) {
-                writer.write(d+"");
+            for(int i = 0; i<timeCosts.size(); i++) {
+                writer.write(queries.get(i) + "\t" + queries.get(i).split(",").length + "\t" +
+                        timeCosts.get(i)[0] + "\t" + timeCosts.get(i)[1] + "\t" + timeCosts.get(i)[2]);
                 writer.newLine();
             }
             writer.close();
-        }catch(IOException e){
+        }catch(IOException e) {
             e.printStackTrace();
         }
     }

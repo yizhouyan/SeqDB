@@ -17,13 +17,29 @@ public class FPQuery {
         this.queryStr = queryStr;
     }
 
-    public double queryOnAllSequences() {
-        long startTime = System.currentTimeMillis();
+    public long [] queryOnAllSequences() {
         HashMap<Integer, QueryResult> patternOccurrences = new HashMap<Integer, QueryResult>();
+        int count = 0;
+        long sumTime = 0;
+        long sumBaseline = 0;
         for (int i = 0; i < this.sequenceStorage.getInputData().getInputStringArray().size(); i++) {
             if (this.sequenceStorage.getLocalFreqPatternWrapUps().containsKey(i)) {
+                SingleSeqWrapup curSequence = this.sequenceStorage.getLocalFreqPatternWrapUps().get(i);
                 // get pattern occurrence on each single sequence
-                QueryResult curBitSetRes = queryOnSingleSequence(this.sequenceStorage.getLocalFreqPatternWrapUps().get(i));
+                if (curSequence.getFreqPatternTrie() == null){
+                    SequenceScan singleScan = new SequenceScan(sequenceStorage.getInputData().getInputStringArray().get(i),
+                            sequenceStorage.getInputData().getInputTimeStamp().get(i),
+                            queryStr, sequenceStorage.getLocalParameterForStorage().getItemGap(),
+                            sequenceStorage.getLocalParameterForStorage().getSeqGap(),
+                            sequenceStorage.getLocalParameterForStorage().getItemGapTS(),
+                            sequenceStorage.getLocalParameterForStorage().getSeqGapTS());
+                    QueryResult curBitSetRes = singleScan.scanSequenceForMatch();
+                    if (curBitSetRes.getSupportCount() > 0)
+                        patternOccurrences.put(i, curBitSetRes);
+                }
+                // find longest match candidate pattern
+                FreqPatternWrapup matchedFreqPattern = curSequence.findLongestPrefixesInTrie(queryStr);
+                QueryResult curBitSetRes = queryOnSingleSequence(curSequence, matchedFreqPattern);
                 if (curBitSetRes.getSupportCount() > 0)
                     patternOccurrences.put(i, curBitSetRes);
             } else {
@@ -39,8 +55,24 @@ public class FPQuery {
             }
         }
 //        System.out.println("Pattern query takes " + (System.currentTimeMillis() - startTime) * 1.0 / 1000 + " seconds");
-        return (System.currentTimeMillis() - startTime) * 1.0 / 1000;
+        return new long[]{sumTime/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+                sumBaseline/count*this.sequenceStorage.getInputData().getInputStringArray().size(),
+                endTrieSearch-startTrieSearch};
                 //patternOccurrences;
+    }
+
+    public QueryResult queryOnSingleSequence(SingleSeqWrapup curSequence, FreqPatternWrapup matchedFreqPattern) {
+        if (matchedFreqPattern == null)
+            return scanSequenceForQuery(curSequence);
+        else{
+            QueryResultCache matchedResult = matchedFreqPattern.getCompleteQueryResult();
+            if(matchedFreqPattern.getPatternLength() == this.queryStr.length) {
+                return matchedResult;
+            }
+            else {
+                return findPatternOccurrenceFromFreq(curSequence, matchedResult);
+            }
+        }
     }
 
     public QueryResult queryOnSingleSequence(SingleSeqWrapup curSequence) {

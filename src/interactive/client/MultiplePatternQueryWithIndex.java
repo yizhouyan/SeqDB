@@ -17,7 +17,7 @@ public class MultiplePatternQueryWithIndex {
         try {
             Registry registry = LocateRegistry.getRegistry("localhost");
             RemoteStatement rs = (RemoteStatement) registry.lookup("InteractivePatternExploration");
-            rs.executeQuery();
+            rs.executeQuery(args[0], args[1]);
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (NotBoundException e) {
