@@ -13,10 +13,11 @@ public class SingleSeqWrapup {
     private long [] originalTimeStamps;
     private int seqLength;
     private ArrayList<FreqPatternWrapup> freqPatternList;
-    private Trie<FreqPatternWrapup> freqPatternTrie;
+    private HashMap<String, FreqPatternWrapup> freqPatternMap;
 
     public SingleSeqWrapup(int seqLength, short [] originalSequence, long [] originalTimeStamps) {
         this.seqLength = seqLength;
+        this.freqPatternMap = new HashMap<String, FreqPatternWrapup>();
         this.freqPatternList = new ArrayList<FreqPatternWrapup>();
         this.originalSequence = originalSequence;
         this.originalTimeStamps = originalTimeStamps;
@@ -24,6 +25,7 @@ public class SingleSeqWrapup {
 
     public void addFreqSeq(FreqPatternWrapup single) {
         this.freqPatternList.add(single);
+        this.freqPatternMap.put(Arrays.toString(single.getFreqPatternInString()), single);
     }
 
     public void sortFreqPatternByLength(){
@@ -37,38 +39,6 @@ public class SingleSeqWrapup {
                     return 0;
             }});
     }
-
-
-    public void buildFreqPatternTrie(ArrayList<FreqPatternWrapup> freqPatternWithBMs){
-        this.freqPatternTrie = new Trie<FreqPatternWrapup>();
-        for(FreqPatternWrapup freqPattern: freqPatternWithBMs){
-            this.freqPatternTrie.insert(freqPattern.getFreqPatternInString(), freqPattern);
-        }
-    }
-
-    public ArrayList<FreqPatternWrapup> findAllPrefixesInTrie(short [] query){
-        return this.freqPatternTrie.findAllPrefixes(query);
-    }
-
-    public FreqPatternWrapup findLongestPrefixesInTrie(short [] query){
-        return this.freqPatternTrie.findLongestPrefixes(query);
-    }
-
-//    public FreqPatternWrapup findLongestPrefixesInTrie(short [] query){
-//        return this.freqPatternFST.lookupKey(query);
-//    }
-
-
-//    public SingleSeqWrapup clone(){
-//        SingleSeqWrapup newWrapUp = new SingleSeqWrapup(this.seqLength, this.originalSequence);
-//        ArrayList<FreqPatternWrapup> newSeqs = new ArrayList<FreqPatternWrapup>();
-//        for(FreqPatternWrapup single: this.freqPatternList){
-//            newSeqs.add(single.clone());
-//        }
-//        newWrapUp.setFreqPatternList(newSeqs);
-////        newWrapUp.setFreqPatternTrie(this.freqPatternTrie);
-//        return newWrapUp;
-//    }
 
     public void printAllPatternSet(){
         System.out.println();
@@ -130,12 +100,11 @@ public class SingleSeqWrapup {
 
     public short[] getOriginalSequence() {return originalSequence; }
 
-    public Trie<FreqPatternWrapup> getFreqPatternTrie() {
-        return freqPatternTrie;
+    public HashMap<String, FreqPatternWrapup> getFreqPatternMap() {
+        return freqPatternMap;
     }
 
-    public void setFreqPatternTrie(Trie<FreqPatternWrapup> freqPatternTrie) {
-        this.freqPatternTrie = freqPatternTrie;
+    public void setFreqPatternMap(HashMap<String, FreqPatternWrapup> freqPatternMap) {
+        this.freqPatternMap = freqPatternMap;
     }
-
 }

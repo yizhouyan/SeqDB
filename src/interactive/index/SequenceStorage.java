@@ -54,16 +54,6 @@ public class SequenceStorage {
             if(pst.getTotalFrequentSeqs().size()>0) {
                 SingleSeqWrapup freqSeqTree = pst.generateBitMapTree();
                 ArrayList<FreqPatternWrapup> freqPatternWithBMs = freqSeqTree.getFreqPatternList();
-//                BasicStatistics.totalNumPatterns += freqPatternWithBMs.size();
-//                BasicStatistics.seqWithPatterns += 1;
-                if (freqSeqTree.getFreqPatternList() != null) {
-                    if (freqPatternWithBMs.size() > 0)
-                        freqSeqTree.buildFreqPatternTrie(freqPatternWithBMs);
-//                    for(FreqPatternWrapup freqPattern: freqPatternWithBMs){
-//                        BasicStatistics.totalSizePattern += freqPattern.getPatternLength();
-//                        BasicStatistics.totalNumOcc += freqPattern.getIndependentSupport();
-//                    }
-                }
                 this.localFreqPatternWrapUps.put(i, freqSeqTree);
             }else{
                 this.localFreqPatternWrapUps.put(i, pst.getEmptyBMTree());

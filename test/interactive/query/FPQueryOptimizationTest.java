@@ -41,8 +41,6 @@ class FPQueryOptimizationTest {
 //        storage.printSequenceStorage();
         singleSequence = storage.getLocalFreqPatternWrapUps().get(0);
         singleSequence.printFreqSeqSet(2);
-
-
     }
 
     @Test

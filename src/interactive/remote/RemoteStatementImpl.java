@@ -159,7 +159,7 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
 
     @Override
     public void executeQuery(String globalFreqFileName, String outputFileName) throws RemoteException {
-        ArrayList<long []> timeCosts = new ArrayList<>();
+        ArrayList<Long> timeCosts = new ArrayList<>();
 //        ArrayList<String> queries = InteractiveToolkit.generateQuery();
 //        ArrayList<String> queries = InteractiveToolkit.getQuerysFromFile("GlobalFrequent_logFile");
         ArrayList<String> queries = InteractiveToolkit.getQuerysFromFile(globalFreqFileName);
@@ -176,7 +176,7 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
 //                FPQueryWithOneTrie fpQuery = new FPQueryWithOneTrie(this.sequenceStorage, queryInShort);
 ////                FPQueryWithGroupTries fpQuery = new FPQueryWithGroupTries(this.sequenceStorage, queryInShort);
                 FPQuery fpQuery = new FPQuery(this.sequenceStorage, queryInShort);
-                long[] timeCost = fpQuery.queryOnAllSequences();
+                long timeCost = fpQuery.queryOnAllSequences();
 //                double timeCost1 = fpQuery.queryOnAllSequencesWithOneTrie();
 //                double timeCost2 = fpQuery.queryOnAllSequencesWithOneTrie();
 //                double timeCost3 = fpQuery.queryOnAllSequencesWithOneTrie();
@@ -190,7 +190,7 @@ public class RemoteStatementImpl extends UnicastRemoteObject implements RemoteSt
 //            BufferedWriter writer = new BufferedWriter(new FileWriter("Results_indexquery_globalFrequent_logFile_synthetic_opt"));
             for(int i = 0; i<timeCosts.size(); i++) {
                 writer.write(queries.get(i) + "\t" + queries.get(i).split(",").length + "\t" +
-                        timeCosts.get(i)[0] + "\t" + timeCosts.get(i)[1] + "\t" + timeCosts.get(i)[2]);
+                        timeCosts.get(i));
                 writer.newLine();
             }
             writer.close();
