@@ -451,6 +451,7 @@ public class PrefixSpanTool {
         long itemGapTS = 5000;
         long seqGapTS = 60000;
         LocalParameter localParameter = new LocalParameter(localSupport, itemGap, seqGap, itemGapTS, seqGapTS);
+
 //        PrefixSpanTool pst = new PrefixSpanTool(s.split(","), localParameter);
 //        pst.prefixSpanCalculate();
 //        pst.printTotalFreSeqs();

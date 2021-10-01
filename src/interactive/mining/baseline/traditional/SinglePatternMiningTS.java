@@ -27,13 +27,21 @@ public class SinglePatternMiningTS {
 	 *
 	 * @return
 	 */
-	public void findFreqSeqInOneString(HashSet<String> globalFrequentElements) {
+	public ArrayList<String> findFreqSeqInOneString(HashSet<String> globalFrequentElements) {
 		// first compute frequent sequences
 		long start = System.currentTimeMillis();
 
 		PrefixSpanTool pst = new PrefixSpanTool(inputSequence, localParameterSpace);
 		totalFrequentSeqs = pst.prefixSpanCalculate(globalFrequentElements);
+		return getFreqPatternsInList(totalFrequentSeqs);
 //		return FreqSeqsInMap.keySet();
+	}
+
+	public ArrayList<String> getFreqPatternsInList(ArrayList<FreqSequence> freqSeqs){
+		ArrayList<String> frequentPatterns = new ArrayList<>();
+		for (FreqSequence f: freqSeqs)
+			frequentPatterns.add(f.getFreqSeqInString());
+		return frequentPatterns;
 	}
 
 	public static void main(String[] args) {
